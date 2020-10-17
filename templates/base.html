@@ -4,16 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Raleway" />
     <title>My website</title>
 </head>
 <body>
-    <nav id="nav_menu">
+   <nav class="navbar">
+       <div class="logo">
+           <p> 
+               <a href="#">The Pallets Projects</a>
+           </p>
+       </div>
+       <div class="navbar-links">
         <ul>
-            <li><a class="active" href="#home">Home</a></li>
-            <li><a href="#news">News</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#about">Aldo</a></li>
+            
+            <li>
+                <a href="#">Projects</a>
+            </li>
+            <li>
+                <a href="#">Governance</a>
+            </li>
+            <li>
+                <a href="#">People</a>
+            </li>
+            <li>
+                <a href="#">Blog</a>
+            </li>
+            <li>
+                <a href="#"><strong>Donate</strong></a>
+            </li>
         </ul>
-    </nav>
+       </div>
+   </nav> 
+   
+
+   {% block content %}
+   {% endblock %}
+
+
+
 </body>
 </html>
