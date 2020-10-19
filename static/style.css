@@ -49,7 +49,9 @@ body{
 /* <------#Home#-------->*/
 .home-info{
   display: flex;
-  margin: 50px;
+  margin: 15px;
+  text-align: center;
+  
 }
 .container_of_logo_img{
   display: flex;
@@ -60,7 +62,7 @@ body{
   height: 250px;
 }
 .home-info h1{
-  font-size: 36px;
+  font-size: 40px;
   font-weight: 200;
   margin: 10px 0 15px 0;
   color: inherit; 
@@ -76,4 +78,56 @@ body{
   display: flex;
   flex-direction: column;
   flex-basis: 100%;
+}
+.home-info p{
+  margin: 0 0 12px;
+  line-height: 1.75;
+  font-size: 19px;
+}
+.home-info-2{
+  display: flex;
+  margin: 5px 15px 100px 15px;
+  text-align: center;
+  justify-content: center;
+  
+}
+.row1-info-2{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 42%;
+}
+.column-info-2{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+.home-info-2 a{
+  position: relative;
+  text-decoration: none;
+  font-size: 26px;
+  color: #006084;
+  transition: 0.5s;
+  margin-bottom: 0px;
+}
+.home-info-2 a:hover{
+  color: blue;
+}
+.home-info-2 p{
+  margin: 0 0 12px;
+}
+.break{
+  flex-basis: 100%;
+  height: 0;
+}
+
+/*<----- Copy Rights----->*/
+.copyright{
+  display: flex;
+  border-top: 1px solid #666;
+  padding: 28px 0;
+  line-height: 50px;
+  background-color: #666;
+  display: block;
 }
