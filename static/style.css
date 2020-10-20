@@ -36,6 +36,11 @@ body{
   color: white;
   cursor: pointer;
 }
+
+
+.navbar-links li a:active{
+  background-color: black;
+}
 .logo p a{
   color: #9d9d9d;
   font-size: 22px;
@@ -46,6 +51,8 @@ body{
   color: white;
   cursor: pointer;
 }
+
+
 /* <------#Home#-------->*/
 .home-info{
   display: flex;
@@ -60,9 +67,8 @@ body{
 .container_of_logo_img img{
   margin: 20px;
   height: 250px;
-}
-.home-info h1{
-  font-size: 40px;
+  
+ 
   font-weight: 200;
   margin: 10px 0 15px 0;
   color: inherit; 
@@ -130,4 +136,75 @@ body{
   line-height: 50px;
   background-color: #666;
   display: block;
+}
+
+
+
+
+/*<<<<<<<<<<<<<Projects>>>>>>>>>>>*/
+.container{
+  width: 900px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.info_projects{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  
+}
+.info_projects ul{
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+}
+.info_projects ul a{
+  text-decoration: none;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #006084;
+  background-color: transparent;
+}
+.info_projects li{
+  list-style: none ;
+}
+
+#title_projects{
+  display: flex;
+  margin-left: 700px;
+}
+#h1-title{
+  margin-left: auto;
+  padding-left: 202px;
+  height: 1.75;
+  margin-top: 24px;
+  margin-bottom: 12px;
+  font-weight: 500;
+  line-height: 1.1;
+}
+#hr{
+  border: 1px solid #eeeeee;
+  margin-top: 24px;
+  margin-bottom: 12px;
+  margin-left: 202px;
+  max-width: 700px;
+
+}
+.project-selector{
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 250px;
+  margin-bottom: 50px;
+}
+.project-selector a{
+  text-decoration: none;
+  font-size: 17px;
+  color: #006084;
+  background-color: transparent;
+}
+.project-selector li{
+  line-height: 1.75;
 }
