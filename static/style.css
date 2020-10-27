@@ -208,3 +208,35 @@ body{
 .project-selector li{
   line-height: 1.75;
 }
+
+
+
+/*<----------Governance----------->*/
+#governance_info{
+  display: flex;
+  margin: 15px;
+  
+  align-items: center;
+  align-content: center;
+  text-align: center;
+}
+#row_info{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  
+}
+#column_info{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  
+}
+#governance_info p{
+  margin: 0 0 12px;
+  line-height: 1.75;
+  font-family: "Raleway", "Aria", sans-serif;
+  font-size: 17px;
+  color: #333333;
+}
