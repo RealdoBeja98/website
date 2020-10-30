@@ -214,29 +214,51 @@ body{
 /*<----------Governance----------->*/
 #governance_info{
   display: flex;
-  margin: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: auto;
+  margin-left: 150px;
   
-  align-items: center;
-  align-content: center;
-  text-align: center;
 }
+
 #row_info{
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  width: 100%;
+  flex-direction: row;
   
 }
-#column_info{
+#column_info_1{
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
-  flex-basis: 100%;
   
+}
+
+ul li a{
+  text-decoration: none;
+  color: #006084;
+  line-height: 1.75;
+  display: block;
+  padding: 1.5px 10px;
+}
+ul li{
+  list-style: none;
+  line-height: 1.3;
+}
+.hr_for_table{
+  border: 1px solid #eeeeee;
+  width: 170px;
+}
+#header{
+  margin-left: 40px;
+}
+#governance_info h1{
+  font-size: 42px;
+  margin-bottom: 12px;
 }
 #governance_info p{
-  margin: 0 0 12px;
   line-height: 1.75;
-  font-family: "Raleway", "Aria", sans-serif;
-  font-size: 17px;
+  margin: 0 0 12px;
   color: #333333;
+  font-size: 17px;
 }
