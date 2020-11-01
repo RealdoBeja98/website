@@ -41,11 +41,15 @@ body{
 .navbar-links li a:active{
   background-color: black;
 }
+.logo{
+  margin-top: 6px;
+}
 .logo p a{
   color: #9d9d9d;
   font-size: 22px;
-  padding: 1px;
+  padding: 3px 3px 3px 3px;
   text-decoration: none;
+  
 }
 .logo p a:hover{
   color: white;
@@ -153,7 +157,7 @@ body{
   display: flex;
   text-align: center;
   justify-content: center;
-  
+  flex-wrap: wrap;
 }
 .info_projects ul{
   display: flex;
@@ -261,4 +265,26 @@ ul li{
   margin: 0 0 12px;
   color: #333333;
   font-size: 17px;
+}
+.hr_for_header{
+  border: 1px solid #eeeeee;
+  width: 700px;
+  margin: 50px 0 50px 39px;
+}
+.table_of_informantion{
+  display: flex;
+  justify-content: center;
+  margin-left: 300px;
+}
+.row_of_information{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.column_of_information{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex: 1;
+  margin-left: -40px;
 }
