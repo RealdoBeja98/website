@@ -19,14 +19,51 @@ def projects():
 
 @app.route("/governance")
 def governance():
-    return render_template('governance.html', title = 'Governance | The Pallets Project')
+    return render_template("governance.html", title="Governance | The Pallets Project")
 
 
+@app.route("/blog")
+def blog():
+    # Get first 5 blog posts
+    c.execute("SELECT (id, title, content) FROM blog LIMIT 5")
+    posts = c.fetchall()
+    # Render posts using template
+
+    # There's more than 5 blog posts so we need a next item in pagination
+    # In template check if has_next_page is True and add next page in pagination if it is
+    has_next_page = _get_has_next_page(5)
+
+    return "Blog"
 
 
+@app.route("/blog/page/<int:page>")
+def blog_page(page):
+    # page is the page number in the pagination
+    # We need to get the posts from (page-1)*5 to (page+1)*5
+    # For example, if we are in the second page (page=2) we need the posts 6 through 11
+    lower_limit = (page - 1) * 5
+    upper_limit = (page + 1) * 5
+    query_param = (lower_limit, upper_limit)
+    c.execute("SELECT (id, title, content) FROM blog LIMIT ?, ?", query_param)
+
+    # render posts using template
+    posts = c.fetchall()
+
+    has_next_page = _get_has_next_page(upper_limit)
+
+    return f"Blog page {page}"
+
+
+def _get_has_next_page(upper_limit):
+    c.execute("SELECT COUNT(*) FROM blog")
+    posts_count = c.fetchone()
+
+    if int(posts_count) > upper_limit:
+        return True
+
+    return False
 
 
 if __name__ == "__main__":
     app.run(debug=True)
-
-
+    conn.close()
