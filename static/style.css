@@ -288,3 +288,39 @@ ul li{
   flex: 1;
   margin-left: -40px;
 }
+
+/*<--------  Blog -------->*/
+.information_of_blog{
+  display: flex;
+  justify-content: center;
+  width: 40%;
+  margin: auto;
+  padding-left: 7rem;
+}
+#row_for_blog{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+#column_for_blog{
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  flex-direction: column;
+}
+.information_of_blog h1{
+  font-weight: 200;
+  font-size: 34px;
+  margin-top: 24px;
+  margin-bottom: 12px;
+  line-height: 1.1;
+  font-family: sans-serif;
+  color: #333333;
+}
+.information_of_blog p{
+  margin: 0 0 12px;
+  line-height: 1.75;
+  font-family: "Raleway", "Aria", sans-serif;
+  font-size: 17px;
+  color: #333333;
+}
