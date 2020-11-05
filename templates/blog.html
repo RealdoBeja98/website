@@ -2,9 +2,7 @@
 {% block content %}
 
 <div class="information_of_blog">
-    <div id="row_for_blog">
         {% for post in posts %}
-            <div id="column_for_blog">
                 <div class="container_of_each_element_blog">
                     {% autoescape false %}
                         <h2>{{ post.title }}</h2>
@@ -13,8 +11,6 @@
                     {% endautoescape %}
                         <p>{{ post.installation }}</p>
                 </div>
-            </div>
-            <div class="break"></div>
         {% endfor %}
     </div>
 </div>
