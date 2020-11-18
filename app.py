@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, url_for
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.exc import IntegrityError
 import sqlite3
@@ -7,7 +7,7 @@ import sqlite3
 
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///blog.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///blog1.db'
 
 db = SQLAlchemy(app)
 
@@ -125,11 +125,8 @@ def governance():
 
 @app.route("/blog")
 def blog():
-    posts_test = Post.query.all()
-    print(posts_test)
-
-    #page = request.args.get('page', 1, type=int)
-    #posts_in_table = Post.query.paginate(page=page, per_page=5)
+    page = request.args.get('page', 1, type=int)
+    posts_test = Post.query.paginate(page=page, per_page=8)
 
     return render_template("blog.html", title="Blog | The Pallets Project", posts_test=posts_test)
 
